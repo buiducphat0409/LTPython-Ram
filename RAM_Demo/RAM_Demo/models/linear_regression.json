@@ -1,0 +1,170 @@
+{
+  "name": "linear_regression",
+  "features": [
+    "total_capacity_gb",
+    "bus_speed_mhz",
+    "sticks_count",
+    "cas_latency",
+    "bandwidth_index",
+    "log_capacity",
+    "log_bus_speed",
+    "cap_speed_ratio",
+    "is_rgb",
+    "is_ecc_rdimm",
+    "is_laptop",
+    "is_bulk_server",
+    "ram_generation",
+    "brand",
+    "condition",
+    "unit_type",
+    "type"
+  ],
+  "defaults": {
+    "total_capacity_gb": 16.0,
+    "bus_speed_mhz": 4800.0,
+    "sticks_count": 1.0,
+    "cas_latency": 36.0,
+    "bandwidth_index": 89.6,
+    "log_capacity": 4.0,
+    "log_bus_speed": 12.228818690495881,
+    "cap_speed_ratio": 0.005,
+    "is_rgb": 0.0,
+    "is_ecc_rdimm": 0.0,
+    "is_laptop": 0.0,
+    "is_bulk_server": 0.0,
+    "ram_generation": "DDR5",
+    "brand": "BytecRAM",
+    "condition": "New",
+    "unit_type": "Single",
+    "type": "DDR4 SDRAM"
+  },
+  "target": "price",
+  "metrics": {
+    "MAE": 52.50083934035787,
+    "RMSE": 100.1230842922575,
+    "R2": 0.7854658965517352,
+    "MAPE": 25.723601770864455,
+    "within_10": 39.04593639575972,
+    "within_20": 61.30742049469965
+  },
+  "interval_alpha": 0.1,
+  "interval_level": 0.9,
+  "conformal_q": 110.61157156712557,
+  "calibration_n": 566,
+  "test_coverage": 0.8763250883392226,
+  "test_n": 566,
+  "dataset": "D1 + D2 (Ridge cải tiến) + D3",
+  "segments": [
+    {
+      "generation": "DDR3",
+      "cap_group": "17-32 GB",
+      "n": 1,
+      "MAPE": 18.73069777043063,
+      "accuracy": 81.26930222956938,
+      "within_10": 0.0,
+      "within_20": 100.0,
+      "n_products": 1
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "17-32 GB",
+      "n": 11,
+      "MAPE": 68.59510315755882,
+      "accuracy": 31.404896842441175,
+      "within_10": 36.36363636363637,
+      "within_20": 54.54545454545454,
+      "n_products": 11
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "33-64 GB",
+      "n": 6,
+      "MAPE": 29.28958084740771,
+      "accuracy": 70.7104191525923,
+      "within_10": 33.33333333333333,
+      "within_20": 33.33333333333333,
+      "n_products": 6
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "9-16 GB",
+      "n": 85,
+      "MAPE": 25.923840081434275,
+      "accuracy": 74.07615991856572,
+      "within_10": 30.58823529411765,
+      "within_20": 63.52941176470588,
+      "n_products": 85
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": ">64 GB",
+      "n": 10,
+      "MAPE": 28.374138246632697,
+      "accuracy": 71.6258617533673,
+      "within_10": 30.0,
+      "within_20": 40.0,
+      "n_products": 10
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "≤8 GB",
+      "n": 170,
+      "MAPE": 22.3523729245507,
+      "accuracy": 77.6476270754493,
+      "within_10": 48.23529411764706,
+      "within_20": 64.70588235294117,
+      "n_products": 169
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "17-32 GB",
+      "n": 137,
+      "MAPE": 20.062660228954766,
+      "accuracy": 79.93733977104523,
+      "within_10": 34.306569343065696,
+      "within_20": 59.854014598540154,
+      "n_products": 135
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "33-64 GB",
+      "n": 37,
+      "MAPE": 16.21511720058425,
+      "accuracy": 83.78488279941575,
+      "within_10": 56.75675675675676,
+      "within_20": 72.97297297297297,
+      "n_products": 37
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "9-16 GB",
+      "n": 88,
+      "MAPE": 40.0538728019537,
+      "accuracy": 59.9461271980463,
+      "within_10": 29.545454545454547,
+      "within_20": 54.54545454545454,
+      "n_products": 88
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": ">64 GB",
+      "n": 7,
+      "MAPE": 32.482121560048064,
+      "accuracy": 67.51787843995194,
+      "within_10": 57.14285714285714,
+      "within_20": 57.14285714285714,
+      "n_products": 7
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "≤8 GB",
+      "n": 14,
+      "MAPE": 15.908118062765489,
+      "accuracy": 84.09188193723452,
+      "within_10": 42.857142857142854,
+      "within_20": 64.28571428571429,
+      "n_products": 14
+    }
+  ],
+  "segment_cap_col": "total_capacity_gb"
+}

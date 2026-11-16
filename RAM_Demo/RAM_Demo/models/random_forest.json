@@ -1,0 +1,96 @@
+{
+  "name": "random_forest",
+  "features": [
+    "capacity_gb",
+    "speed_mhz",
+    "cas_latency",
+    "num_sticks",
+    "is_sodimm",
+    "has_rgb",
+    "is_ecc_server",
+    "brand",
+    "source",
+    "condition"
+  ],
+  "defaults": {
+    "capacity_gb": 32.0,
+    "speed_mhz": 6000.0,
+    "cas_latency": 36.0,
+    "num_sticks": 2.0,
+    "is_sodimm": 0.0,
+    "has_rgb": 0.0,
+    "is_ecc_server": 0.0,
+    "brand": "G.Skill",
+    "source": "C_costinflation",
+    "condition": "New"
+  },
+  "target": "usd_per_gb",
+  "metrics": {
+    "MAE": 1.633760787199453,
+    "RMSE": 2.3824425307865593,
+    "R2": 0.25620060032260117,
+    "MAPE": 9.329484849177884,
+    "within_10": 69.36842105263158,
+    "within_20": 91.87368421052632
+  },
+  "interval_alpha": 0.1,
+  "interval_level": 0.9,
+  "conformal_q": 3.0520200758607476,
+  "calibration_n": 4282,
+  "test_coverage": 0.8269473684210527,
+  "test_n": 4750,
+  "dataset": "D1+D2+D3",
+  "segments": [
+    {
+      "generation": "DDR5",
+      "cap_group": "17-32 GB",
+      "n": 2839,
+      "MAPE": 10.491143657911003,
+      "accuracy": 89.50885634208899,
+      "within_10": 66.46706586826348,
+      "within_20": 88.62275449101796,
+      "n_products": 147
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "33-64 GB",
+      "n": 445,
+      "MAPE": 8.395889338277858,
+      "accuracy": 91.60411066172215,
+      "within_10": 56.853932584269664,
+      "within_20": 97.30337078651685,
+      "n_products": 40
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "9-16 GB",
+      "n": 1043,
+      "MAPE": 5.515068914851811,
+      "accuracy": 94.48493108514819,
+      "within_10": 95.39789069990412,
+      "within_20": 97.60306807286673,
+      "n_products": 79
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": ">64 GB",
+      "n": 28,
+      "MAPE": 24.58554429880799,
+      "accuracy": 75.41445570119201,
+      "within_10": 14.285714285714285,
+      "within_20": 14.285714285714285,
+      "n_products": 4
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "≤8 GB",
+      "n": 395,
+      "MAPE": 11.02256535365798,
+      "accuracy": 88.97743464634202,
+      "within_10": 39.49367088607595,
+      "within_20": 99.49367088607595,
+      "n_products": 12
+    }
+  ],
+  "segment_cap_col": "__total__"
+}

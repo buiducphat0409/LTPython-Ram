@@ -1,0 +1,153 @@
+{
+  "name": "xgboost",
+  "features": [
+    "ram_generation",
+    "brand",
+    "condition",
+    "capacity_gb",
+    "bus_speed_mhz",
+    "unit_type",
+    "wasPrice",
+    "available",
+    "sold",
+    "type",
+    "is_bulk_server",
+    "sticks_count",
+    "total_capacity_gb"
+  ],
+  "defaults": {
+    "ram_generation": "DDR5",
+    "brand": "BytecRAM",
+    "condition": "New",
+    "capacity_gb": 16.0,
+    "bus_speed_mhz": 4800.0,
+    "unit_type": "Single",
+    "wasPrice": 349.99,
+    "available": 10.0,
+    "sold": 4.0,
+    "type": "DDR4 SDRAM",
+    "is_bulk_server": 0.0,
+    "sticks_count": 1.0,
+    "total_capacity_gb": 16.0
+  },
+  "target": "price",
+  "metrics": {
+    "MAE": 62.42866998488328,
+    "RMSE": 228.37259588674115,
+    "R2": 0.48971664919648294,
+    "MAPE": 26.108514703307083,
+    "within_10": 43.96551724137931,
+    "within_20": 67.24137931034483
+  },
+  "interval_alpha": 0.1,
+  "interval_level": 0.9,
+  "conformal_q": 111.90096496582032,
+  "calibration_n": 580,
+  "test_coverage": 0.8844827586206897,
+  "test_n": 580,
+  "dataset": "D2",
+  "inverse_log1p": true,
+  "segments": [
+    {
+      "generation": "DDR4",
+      "cap_group": "17-32 GB",
+      "n": 20,
+      "MAPE": 59.651159367237085,
+      "accuracy": 40.348840632762915,
+      "within_10": 25.0,
+      "within_20": 30.0,
+      "n_products": 20
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "33-64 GB",
+      "n": 7,
+      "MAPE": 172.67216624646102,
+      "accuracy": 0.0,
+      "within_10": 14.285714285714285,
+      "within_20": 28.57142857142857,
+      "n_products": 7
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "9-16 GB",
+      "n": 97,
+      "MAPE": 23.5200197642252,
+      "accuracy": 76.4799802357748,
+      "within_10": 52.57731958762887,
+      "within_20": 65.97938144329896,
+      "n_products": 97
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": ">64 GB",
+      "n": 8,
+      "MAPE": 81.27705126230369,
+      "accuracy": 18.722948737696314,
+      "within_10": 0.0,
+      "within_20": 12.5,
+      "n_products": 8
+    },
+    {
+      "generation": "DDR4",
+      "cap_group": "≤8 GB",
+      "n": 149,
+      "MAPE": 14.952979668170652,
+      "accuracy": 85.04702033182934,
+      "within_10": 55.033557046979865,
+      "within_20": 78.52348993288591,
+      "n_products": 149
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "17-32 GB",
+      "n": 152,
+      "MAPE": 16.95172533712007,
+      "accuracy": 83.04827466287993,
+      "within_10": 42.10526315789473,
+      "within_20": 75.0,
+      "n_products": 148
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "33-64 GB",
+      "n": 33,
+      "MAPE": 19.780056978701953,
+      "accuracy": 80.21994302129805,
+      "within_10": 33.33333333333333,
+      "within_20": 63.63636363636363,
+      "n_products": 33
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "9-16 GB",
+      "n": 88,
+      "MAPE": 39.03348989774224,
+      "accuracy": 60.96651010225776,
+      "within_10": 38.63636363636363,
+      "within_20": 62.5,
+      "n_products": 88
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": ">64 GB",
+      "n": 7,
+      "MAPE": 15.45221395907169,
+      "accuracy": 84.54778604092832,
+      "within_10": 42.857142857142854,
+      "within_20": 71.42857142857143,
+      "n_products": 7
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "≤8 GB",
+      "n": 17,
+      "MAPE": 25.152605062877836,
+      "accuracy": 74.84739493712216,
+      "within_10": 23.52941176470588,
+      "within_20": 29.411764705882355,
+      "n_products": 17
+    }
+  ],
+  "segment_cap_col": "total_capacity_gb"
+}

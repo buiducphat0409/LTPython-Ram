@@ -1,0 +1,96 @@
+{
+  "name": "svr",
+  "features": [
+    "capacity_gb",
+    "speed_mhz",
+    "cas_latency",
+    "num_sticks",
+    "is_sodimm",
+    "has_rgb",
+    "is_ecc_server",
+    "brand",
+    "source",
+    "condition"
+  ],
+  "defaults": {
+    "capacity_gb": 32.0,
+    "speed_mhz": 6000.0,
+    "cas_latency": 36.0,
+    "num_sticks": 2.0,
+    "is_sodimm": 0.0,
+    "has_rgb": 0.0,
+    "is_ecc_server": 0.0,
+    "brand": "G.Skill",
+    "source": "C_costinflation",
+    "condition": "New"
+  },
+  "target": "usd_per_gb",
+  "metrics": {
+    "MAE": 1.1808565911540871,
+    "RMSE": 1.8244662478143163,
+    "R2": 0.34259055301276187,
+    "MAPE": 8.034539200328927,
+    "within_10": 83.58024691358025,
+    "within_20": 91.60493827160494
+  },
+  "interval_alpha": 0.1,
+  "interval_level": 0.9,
+  "conformal_q": 3.496378483808739,
+  "calibration_n": 1238,
+  "test_coverage": 0.9506172839506173,
+  "test_n": 810,
+  "dataset": "D1+D2+D3",
+  "segments": [
+    {
+      "generation": "DDR5",
+      "cap_group": "17-32 GB",
+      "n": 364,
+      "MAPE": 7.400163815090899,
+      "accuracy": 92.5998361849091,
+      "within_10": 89.56043956043956,
+      "within_20": 96.15384615384616,
+      "n_products": 54
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "33-64 GB",
+      "n": 135,
+      "MAPE": 5.911343735588936,
+      "accuracy": 94.08865626441107,
+      "within_10": 87.4074074074074,
+      "within_20": 96.29629629629629,
+      "n_products": 11
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "9-16 GB",
+      "n": 275,
+      "MAPE": 7.460322629378817,
+      "accuracy": 92.53967737062118,
+      "within_10": 84.36363636363636,
+      "within_20": 92.36363636363636,
+      "n_products": 36
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": ">64 GB",
+      "n": 1,
+      "MAPE": 45.92821932227334,
+      "accuracy": 54.07178067772666,
+      "within_10": 0.0,
+      "within_20": 0.0,
+      "n_products": 1
+    },
+    {
+      "generation": "DDR5",
+      "cap_group": "≤8 GB",
+      "n": 35,
+      "MAPE": 26.250536481925423,
+      "accuracy": 73.74946351807458,
+      "within_10": 2.857142857142857,
+      "within_20": 22.857142857142858,
+      "n_products": 8
+    }
+  ],
+  "segment_cap_col": "__total__"
+}
